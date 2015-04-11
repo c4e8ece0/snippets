@@ -1,0 +1,35 @@
+AddDefaultCharset  Windows-1251
+AddDefaultCharset UTF-8
+
+DirectoryIndex index.php
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} google_.html [OR]
+RewriteCond %{REQUEST_FILENAME} robots.txt
+RewriteRule .* - [L]
+
+RewriteCond %{HTTP_HOST} !^www\.somehost.tld$
+RewriteCond %{HTTP_HOST} !^devhost$
+RewriteRule ^(.*)$ http://www.somehost.tld/$1 [R=301,L]
+
+<IfModule !mod_deflate.c>
+RewriteCond %{REQUEST_URI} ^\/e\/.*\.css$
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(.*)$ /e/pack.php [L]
+</IfModule>
+
+RewriteRule ^page_without_slash\.html$ http://www.somehost.tld/mimimi/ [R=301,L]
+RewriteRule ^page_without_slash\.html$ http://www.somehost.tld/mimimi/ [R=permanent,QSA,L]
+Redirect 301 /from/path/page.html http://www.somehost.tld/to/path.html
+
+<FilesMatch "\.(tpl|ini|log|txt)">
+ Order deny,allow
+ Deny from all
+</FilesMatch>
+
+<Files "robots.txt">
+Allow from all
+</Files>
+
