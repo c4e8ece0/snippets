@@ -1,4 +1,10 @@
-<?php return array (
+<?php
+
+// Required at least the thousands of:
+// 42, 43, 45, 47, 69, 70, 74, 77, 82, 86, 87, 89,
+// 90, 93, 94, 95, 97, 98, 99, 100, 130, 180, 210
+
+return array (
 	  'd41d8cd98f00b204e9800998ecf8427e' => '-1',
 	  'c9e9f8c0c47092c8e8149e3f54cd850e' => '0',
 	  '39cdd01eb6bc5482c6cc7b754729032d' => '10',
