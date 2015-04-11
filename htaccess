@@ -19,6 +19,8 @@ RewriteCond %{REQUEST_URI} ^\/e\/.*\.css$
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^(.*)$ /e/pack.php [L]
 </IfModule>
+RewriteCond %{REQUEST_URI} ^\/e\/.*\.js$
+RewriteRule ^(.*)$ /e/pack.php [L]
 
 RewriteRule ^page_without_slash\.html$ http://www.somehost.tld/mimimi/ [R=301,L]
 RewriteRule ^page_without_slash\.html$ http://www.somehost.tld/mimimi/ [R=permanent,QSA,L]
@@ -33,3 +35,7 @@ Redirect 301 /from/path/page.html http://www.somehost.tld/to/path.html
 Allow from all
 </Files>
 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} ^(/.*)$ [NC]
+RewriteRule ^(.*)$ index.php [L]
