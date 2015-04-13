@@ -1,6 +1,7 @@
 ##############################
 # Lookup
 ##############################
+
 cor(dataframe)
 
 plot(dataframe$name)
@@ -84,6 +85,7 @@ y <- if(x > 3) {
 ##############################
 # Functions
 ##############################
+
 # Variadic param
 myplot <- function(x,y, type ="1", ...) {
   plot(x,y,type=type,...)
@@ -103,6 +105,7 @@ square(3)
 ##############################
 # Describers
 ##############################
+
 args(function)
 str(type)
 
