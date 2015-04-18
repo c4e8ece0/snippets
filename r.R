@@ -239,4 +239,25 @@ tapply(x, f, range)
 #############################
 # Split
 #############################
-#
+
+x <- c(rnorm(10), runif(10), rnorm(10,1));x
+f <- gl(3,10) # factor 3 levels by 10 elems
+y <- split(x,f)
+
+# Split by month
+library(datasets)
+head(airquality)
+s<-split(airquality, airquality$Month)
+lapply(s, function(x) colMeans(x[, c("Ozone", "Solar.R", "Wind")], na.rm=TRUE))
+sapply(s, function(x) colMeans(x[, c("Ozone", "Solar.R", "Wind")], na.rm=TRUE))
+
+# Splitting on More than One Level
+x <- rnorm(10)
+f1 <- gl(2,5);f1
+f2 <- gl(5,2);f2
+interaction(f1,f2)
+
+# Interactions can create empty levels
+str(split(x, list(f1, f2)))
+# But they also can be dropped
+str(split(x, list(f1, f2), drop=TRUE))
