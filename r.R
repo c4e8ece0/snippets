@@ -261,3 +261,23 @@ interaction(f1,f2)
 str(split(x, list(f1, f2)))
 # But they also can be dropped
 str(split(x, list(f1, f2), drop=TRUE))
+
+#############################
+# Debug
+#############################
+
+rm(x)
+mean(x)
+traceback()
+
+rm(y)
+lm(y-x)
+traceback()
+
+debug(lm)
+lm(y-x)
+
+options(error = recover) # hmmm nice!
+read.csv("nosuchfile")
+
+
