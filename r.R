@@ -1,10 +1,11 @@
-# TODO: review, examples
+# TODO: review, compact
 
 ##############################
 # Lookup
 ##############################
 
 cor(dataframe)
+summary(somevar)
 
 plot(dataframe$name)
 pairs(dataframe)
