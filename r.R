@@ -5,7 +5,9 @@
 ##############################
 
 cor(dataframe)
-summary(somevar)
+summary(x)
+str(x)
+svd(matrix)$d
 
 plot(dataframe$name)
 pairs(dataframe)
