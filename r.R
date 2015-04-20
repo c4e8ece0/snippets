@@ -10,10 +10,17 @@ str(x)
 svd(matrix)$d
 
 plot(dataframe$name)
+boxplot()
 pairs(dataframe)
 pie(rep(1, 20), col = rainbow(20))
+hist()
 
 layout(matrix(c(1,2,3,4), 2, 2, byrow=TRUE))
+
+##############################
+# Overview
+##############################
+View(data) # UX view table
 
 ##############################
 # Reading
