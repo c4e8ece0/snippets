@@ -23,6 +23,19 @@ layout(matrix(c(1,2,3,4), 2, 2, byrow=TRUE))
 View(data) # UX view table
 
 ##############################
+# Handmade
+##############################
+# Mode calc
+ModeValue <- function(x, na.rm = FALSE) {
+    if(na.rm){
+        x = x[!is.na(x)]
+    }
+    ux <- unique(x)
+    return(ux[which.max(tabulate(match(x, ux)))])
+}
+
+
+##############################
 # Reading
 ##############################
 
