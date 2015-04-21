@@ -33,6 +33,12 @@ ModeValue <- function(x, na.rm = FALSE) {
     ux <- unique(x)
     return(ux[which.max(tabulate(match(x, ux)))])
 }
+# NA replace
+for(a in names(all)) {
+    all[a][is.na(all[a])] <- ModeValue(all[a], na.rm=TRUE)
+}
+
+
 
 
 ##############################
