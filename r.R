@@ -309,4 +309,12 @@ lm(y-x)
 options(error = recover) # hmmm nice!
 read.csv("nosuchfile")
 
+#############################
+# Clustering of categorical data
+#############################
+all <- read.table(filename, header = TRUE);
+sel <- sample(1:nrow(all), min(10000,nrow(all)))
+tab <- all[sel,]
+res = kmodes(tab, 50, iter.max=10, weighted=TRUE)
+f <- cbind(tab, res$cluster)
 
