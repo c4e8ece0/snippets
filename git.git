@@ -1,0 +1,5 @@
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/c4e8ece0/test.git
+git push -u origin master
