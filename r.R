@@ -7,7 +7,10 @@
 cor(dataframe)
 summary(x)
 str(x)
+quantile(x)
 svd(matrix)$d
+dim(data)
+names(data)
 
 plot(dataframe$name)
 boxplot()
