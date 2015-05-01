@@ -11,6 +11,12 @@ quantile(x)
 svd(matrix)$d
 dim(data)
 names(data)
+table(x, useNA="ifany")
+table(x$v1, x$v2)
+
+xtabs(Freq ~ Gender + Admit , data=DF)
+warpbreaks$replicate <- rep(1:9, len=54)
+ftable(xtabs(breaks ~., data=warpbreaks))
 
 plot(dataframe$name)
 boxplot()
