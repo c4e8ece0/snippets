@@ -1,0 +1,8 @@
+Level 7   Workflow                  Deis, OpenShift
+Level 6   Orchestration             Kubernetes, Marathon
+Level 5   Scheduling                Mesos, Omega
+Level 4   Container Engine          Docker, Rocket, OSv
+Level 3   Operating System          Ubuntu, RHEL, CoreOS
+Level 2   Virtual Infrastructure    vSphere, EC2
+Level 1   Physical Infrastructure   Raw Compute, Network, Storage
+
